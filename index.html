@@ -9,26 +9,82 @@
     
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
     
 </head>
 <body>
      <header class="header">
         
-        <h1 id="home"><a href="home/index.html">PortifoLisz</a></h1>
+        <h1><a href="#home">PortfoLisz</a></h1>
         <nav>
             <ul class="header-menu" >
-                <li><a href="home/index.html"><img src="assets/img/home.png"></a></li>
-                <li><a href="sobre/index.html"><img src="assets/img/sobre.png"></a></li>
-                <li><a href="profissional/index.html"><img src="assets/img/profissional.png"></a></li>
-                <li><a href="formacao/index.html"><img src="assets/img/formacao.png"></a></li>
-                <li><a href="#contato"><img src="assets/img/contato.png"></a></li>
+                <li><a href="#sobre">Quem Sou?</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+
             </ul>
             
          </nav>
 
      </header>
 
+     <main class="introducao" id="home" aria-label="home">
+        
+        <div class="introducao-texto">
+            
+            <h1>Hi<br>I'm<br>Lisz ;)</h1>
+            <p>Desenvolvedora Front-End</p>
+            
+        </div>
+     </main>
 
+     <section class="sobre" id="sobre" aria-label="sobre">
+        <img src="./assets/img/perfil.png" alt="perfil"/>
+
+        <div class="sobre-texto">
+            <h2 class="subtitulo">Q<span>uem Sou</span>?</h2>
+            <p>Eu sou, <strong>Lisandra</strong> atualmente estudo Ciência da Computação
+            na <strong>UFCA.<br></strong> Desenvolvo aplicações <strong>FrontEnd</strong>
+            que é onde eu descobri minha <strong>paixão</strong>.</p>
+        </div>
+     </section>
+
+
+
+     <section class="formacao" id="formacao" aria-label="formacao">
+        
+        <div class="container">
+            <h2 class="subtitulo">Formação</h2>
+
+        <div class="formacao-lista">
+            <ul class="curso-lista"> 
+                <li class="curso">
+                    <span class="curso-tipo">Bacharel</span>
+                    <h3 class="curso-nome">Ciencia da Computação</h3>
+                    <span class="curso-instituicao">UFCA</span>
+                </li>
+
+                <li class="curso">
+                    <span class="curso-tipo">Complementar</span>
+                    <h3 class="curso-nome">Fullstark</h3>
+                    <span class="curso-instituicao">B7web</span>
+                </li>
+
+                <li class="curso">
+                    <span class="curso-tipo">Complementar</span>
+                    <h3 class="curso-nome">Front-End</h3>
+                    <span class="curso-instituicao">Udemy</span>
+                </li>
+
+
+            </ul>
+        </div>
+        </div>
+        
+
+        </div>
+     </section>
 
      </body>
 

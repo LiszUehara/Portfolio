@@ -1,0 +1,37 @@
+.sobre{
+    max-width: 1200px;
+    padding: 140px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    
+}
+
+
+.sobre-texto{
+    font-size: 1.5rem;
+    line-height: 1.33;
+    margin-bottom: 60px;
+    color: #E8175D;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.sobre-texto strong{
+    color: #d7d7d7;
+}
+
+.sobre-texto p{
+    padding-top: 80px;
+}
+
+.sobre img {
+    width: 100%;
+    height: 90%;
+}
+
+.sobre-texto h2 span:hover{
+    border-bottom: solid 0.3rem #d7d7d7;
+}
