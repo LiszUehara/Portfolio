@@ -1,20 +1,21 @@
 .container{
-    max-width: 1200px;
     padding: 120px 20px;
     margin: 0 auto;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 100px;
 }
 
-.formacao .subtitulo{
-    max-width: 5ch;
-    color:#000000;
-}
 
-.formacao-lista{
+.curso-lista{
     display: flex;
+    justify-content: center;
+    
+    
 }
+
 
 .curso{
     flex:1;
@@ -23,6 +24,8 @@
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+    margin: 20px;
+
 }
 
 .curso-tipo{
@@ -37,9 +40,61 @@
     font-size: 1.125rem;
     line-height: 1.4;
     margin-bottom: 40px;
-    position: relative;
 }
 
 .curso-instituicao{
     font-size: 1.125rem;
+    padding-top: 10px;
+}
+
+.curso-habilidade{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: start;
+
+}
+
+.curso-habilidade li{
+        font-size: 0.875rem;
+        line-height: 1.4;
+        border: 5px;
+        background: #141414;
+        padding: 5px;
+}
+
+.container h2{
+    font-size: 7.5rem;
+    line-height: 1,125rem;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    text-shadow: 0.1rem 0.1rem #d7d7d7;
+    justify-content: flex-end;
+    max-width: 5ch;
+    padding-left: 60px;
+
+}
+
+
+@media(max-width: 800px){
+    .container {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .curso-lista{
+        display: inline-block;
+    }
+
+
+
+    .curso-texto{
+        font-size: 1.25rem;
+    }
+
+    .container .subtitulo{
+        font-size: 3.2rem;
+        max-width: 9ch;
+    }
 }

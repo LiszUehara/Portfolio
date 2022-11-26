@@ -1,25 +1,22 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 80px;
-    width: 100%;
-    padding: 13px 13px;
+
+.header{
+    padding: 120px 20px;
+    margin: 0 auto;
     background: #E8175D;
     color: #d7d7d7;
-    margin: 0 auto;
-    position: fixed;
+    padding: 20px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 0;
 
 }
-
-
 
 .header-menu{
     display: flex;
     gap: 20px;
     justify-content: center;
     padding-right: 26px;
+    font-size: 1.1rem;
 }
 
 
@@ -27,6 +24,7 @@
 .header h1 a{
     text-decoration: none;
     color: #d7d7d7;
+    font-size: 2.2rem;
     
 }
 
@@ -36,8 +34,13 @@
     
 }
 
+li:active{ 
+    background-color: #000; 
+}
+
 .header li a:hover{
-    border-bottom: solid 0.1rem #d7d7d7;
+    border: solid 0.2rem #d7d7d7;
+    padding: 2px;
 }
 
 @media(max-width:600px){
@@ -45,11 +48,6 @@
         flex-direction: column;
     }
 
-    .header-menu{
-        padding-right: 0px;
-        padding: 0;
-        
-    }
 
 }
 

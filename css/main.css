@@ -1,10 +1,12 @@
 .introducao{
-    padding: 150px;
+    max-width: 1200px;
+    padding: 100px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     background-image: url('/assets/img/background2.png');
     background-position: 70% 25%;
+    
 }
 
 .introducao img{
@@ -36,12 +38,14 @@
     }
 }
 
-@media(max-width:426px){
 
-    .introducao{
-        justify-content: flex-start;
-        background-image: url('/assets/img/background2.png');
-    }
+    @media(max-width:426px){
+
+        .introducao{
+            justify-content: flex-start;
+            background-image: url('/assets/img/background2.png');
+            padding-left: 30px;
+        }
 
     .introducao h1{
         font-size: 3.5rem;
