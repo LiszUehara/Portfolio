@@ -24,14 +24,14 @@
 
 .header h1 a{
     text-decoration: none;
-    color: #d7d7d7;
+    color: #141414;
     font-size: 2.2rem;
     
 }
 
 .header li a{
     text-decoration: none;
-    color: #d7d7d7;
+    color: #141414;
     
 }
 
@@ -44,6 +44,7 @@ li:active{
     padding: 2px;
 }
 
+.sobre_menu
 @media(max-width:600px){
     .header{
         flex-direction: column;
