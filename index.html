@@ -111,54 +111,51 @@
         
      </section>
 
-     <!--
      <section class="contato" id="contato" aria-label="contato">
-        <div class="contato-titulo">
-            <h2>Contato</h2>
-            <h3 class="subtitulo">Entre em contato</h3>
-        </div>
+    
         
         <div class="contato-container">
         
-        
-
-    
-
      <div class="contato-formulario">
-        <h3>Quer que eu entre em contato?</h3>
-        <form method="POST">
-            <label>
-                Nome: <br>
-                <input type="text" name="name" required>
-                <br>
-            </label>
+    
+        <form method="POST" action="./index.html">
 
-            <label>
-                Email: <br>
-                <input type="email" name="email" required pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}">
-                <br>
-            </label>
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" id="nome"  name="name" placeholder="Seu nome" required>
+            </div>
 
-            <label>
-                Mensagem: <br>
-                <textarea name="descricao" required></textarea>
-                <br>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email"  name="email" placeholder="seunome@email.com" required pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}">
+            </div>
+
+
+            <div>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+            </div>
                 
-            </label>
-            <button>Enviar</button>
+            
+            <button class="botao">Enviar</button>
         </form>
      </div>
 
 
-     <div>
+     <div class="contato-dados">
 
+        <h3>Contato</h3> 
         <div class="contato-informacao">
+            <address>
+                <a href="mailto:ueharalisandra@gmail.com">ueharalisandra@gmail.com</a>
+                <a href="tel:+5588994377675">+55 (88) 994377675</a>
+            </address>
         
-            <h3>+55 (88) 994377675</h3>
-            <h3>ueharalisandra@gmail.com</h3>
+    
         </div>
         <div class="contato-imagem">
-            <h3>Me encontre aqui</h3>
+
             <a href="https://www.facebook.com/ueharalisandra" target="_blank "> <img src="./assets/img/contato/facebook.png" alt="facebook" > </a>
             <a href="https://github.com/LiszUehara/LiszUehara" target="_blank"><img src="./assets/img/contato/github.png" alt="github"></a>
             <a href="https://www.linkedin.com/in/lisandrauehara/" target="_blank"><img src="./assets/img/contato/linkedin.png" alt="linkedin"></a>
@@ -170,7 +167,7 @@
 
      </div>
     </section>
--->
+
      <footer class="footer">
         <h2>2022 <span>-</span> Desenvolvido por Lisz</h2>
 

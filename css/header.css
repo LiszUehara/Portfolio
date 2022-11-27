@@ -17,6 +17,7 @@
     justify-content: center;
     padding-right: 26px;
     font-size: 1.1rem;
+    
 }
 
 
@@ -48,6 +49,31 @@ li:active{
         flex-direction: column;
     }
 
+    .header-menu{
+        font-size: 20px;
+        gap:10px;
+    }
+
 
 }
+
+@media(max-width:500px){
+    .header-menu{
+        font-size: 15px;
+        padding-right: 5px;
+        gap:10px;
+
+    }
+
+}
+
+@media(max-width:400px){
+    .header-menu{
+        font-size: 11px;
+        padding-left: 5px;
+        gap:10px;
+
+    }
+}
+
 
