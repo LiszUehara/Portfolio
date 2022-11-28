@@ -44,7 +44,6 @@ li:active{
     padding: 2px;
 }
 
-.sobre_menu
 @media(max-width:600px){
     .header{
         flex-direction: column;
