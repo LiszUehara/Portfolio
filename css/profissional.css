@@ -1,0 +1,77 @@
+.profissional .subtitulo{
+    text-align: center;
+}
+
+.profissional-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    gap: 60px;
+}
+
+.profissional-container .profissional-card{
+    position: relative;
+    width:300px;
+    height: 350px;
+    background: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profissional-container .profissional-card .profissional-conteudo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.profissional-container .profissional-card .profissional-conteudo .profissional-imagem{
+    color:#E8175D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    transition: 0.5s;
+}
+
+.profissional-container .profissional-card .profissional-conteudo .profissional-imagem img{
+    width: 40px;
+    height: 40px;
+    background: #E8175D;
+    border: 0px;
+}
+
+
+.profissional-container .profissional-card:hover .profissional-conteudo .profissional-imagem{
+    background: #2e2e2e;
+    box-shadow:  0 0 0 4px #2e2e2e, 
+    0 0  0 300px #E8175D;
+
+}
+
+.profissional-container .profissional-card .profissional-conteudo .profissional-texto h3{
+    font-size: 1.5em;
+    color: #d7d7d7;
+    font-weight: 500;
+    
+}
+
+
+.profissional-container .profissional-card .profissional-conteudo .profissional-texto p{
+    color: #141414;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+}
+
