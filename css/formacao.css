@@ -1,4 +1,8 @@
-.container{
+.formacao{
+    width: 100%;
+
+}
+.formacao-container{
     padding: 120px 20px;
     margin: 0 auto;
     gap: 100px;
@@ -6,6 +10,7 @@
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    
 }
 
 

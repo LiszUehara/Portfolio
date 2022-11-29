@@ -8,6 +8,7 @@
     margin-bottom: 30px;
     position: sticky;
     top: 0;
+    z-index: 99999;
 
 }
 
@@ -72,6 +73,8 @@ li:active{
         font-size: 11px;
         padding-left: 5px;
         gap:10px;
+        margin-top: 10px;
+        
 
     }
 }

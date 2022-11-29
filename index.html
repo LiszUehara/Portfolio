@@ -19,11 +19,12 @@
         <h1><a href="#home">PortfoLisz</a></h1>
         <nav>
             <ul class="header-menu" id="header-menu" >
-                <li class="sobre-menu" ><a href="#sobre" onclick="mostrarAtivo(this);">Quem Sou?</a></li>
-                <li class="formacao-menu"><a href="#formacao" onclick="mostrarAtivo(this);">Formação</a></li>
-                <li class="profissional-menu"><a href="#profissional" onclick="mostrarAtivo(this);">Profissional</a></li>
-                <li class="projetos-menu"><a href="#projetos" onclick="mostrarAtivo(this);">Projetos</a></li>
-                <li ><a href="#contato" onclick="mostrarAtivo(this);">Contato</a></li>
+                <li><a href="#sobre" onclick="mostrarAtivo(this);">Eu</a></li>
+                <li><a href="#formacao" onclick="mostrarAtivo(this);">Formação</a></li>
+                <li><a href="#profissional" onclick="mostrarAtivo(this);">Profissional</a></li>
+                <li><a href="#portfolio" onclick="mostrarAtivo(this);">Portfolio</a></li>
+                <li><a href="#tecnologia" onclick="mostrarAtivo(this);">Tecnologia</a></li>
+                <li><a href="#contato" onclick="mostrarAtivo(this);">Contato</a></li>
 
             </ul>
             
@@ -56,7 +57,7 @@
 
      <section class="formacao" id="formacao" aria-label="formacao">
         
-        <div class="container">
+        <div class="formacao-container">
             <h2 class="subtitulo">Formação</h2>
 
         <div class="formacao-lista">
@@ -106,44 +107,85 @@
 
      </section>
 
+     
+     
+     <section class="portfolio" id="portfolio" aria-label="portfolio">
+        
+        <h2 class="subtitulo">Portfolio</h2>
+    <div class="portfolio-container">
+    
 
-     <section class="Profissional" id="Profissional" aria-label="Profissional">
-        
-        <div class="container">
-            <h2 class="subtitulo">Profissional</h2>
-    
-        <div class="Profissional-lista">
-            <ul class="profissional-lista"> 
-                <li class="profissional">
-                    <span class="profissional-tipo">Estagio</span>
-                    <h3 class="profissional-nome">Desenvolvedora Front-End</h3>
-                    <ul class="profissional-habilidade">
-                        <li>Desenvolvimento de Software</li>
-                        <li>Soft Skill</li>
-                        
-                    </ul>
-                    <span class="profissional-instituicao">Ficticia</span>
-                </li>
-    
-                <li class="profissional">
-                    <span class="profissional-tipo">Estagio</span>
-                    <h3 class="profissional-nome">Desenvolvedora Front-End</h3>
-                    <ul class="profissional-habilidade">
-                        <li>Desenvolvimento de Software</li>
-                        <li>Soft Skill</li>
-                    </ul>
-                    <span class="profissional-instituicao">Ficticia</span>
-                </li>
-    
-    
-    
-    
-            </ul>
+    <div class="portfolio-banner-imagem">
+        <div class="portfolio-imagem portfolio-card1">
+            <div class="portfolio-antes">
+                <h1 class="portfolio-nome">Medicenter</h1>
+                <img src="./assets/img/medicenter.jpg" alt="medica">
+            </div>
         </div>
+        <div class="portfolio-imagem portfolio-card2">
+            <div class="portfolio-depois">
+                <p>Site que utiliza-se de CSS, e os conceitos de FlexBox para simular um layout de uma clinica medica</p>
+                
+                <ul class="portfolio-tecnologia">
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Html</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">CSS</a></li>
+                    <li><a href="https://github.com/LiszUehara/Medicenter_B7web" target="_blank">Github</a></li>
+                    <li><a href="https://spiffy-pasca-8718bf.netlify.app/" type="button" target="_blank">Visualizar</a></li>
+                </ul>
+
+
+                
+                
+            </div>
         </div>
-        
-    
-    
+    </div>
+
+    <div class="portfolio-banner-imagem">
+        <div class="portfolio-imagem portfolio-card1">
+            <div class="portfolio-antes">
+                <h1 class="portfolio-nome">Starbucks</h1>
+                <img src="./assets/img/starbucks.jpg" alt="café">
+            </div>
+        </div>
+        <div class="portfolio-imagem portfolio-card2">
+            <div class="portfolio-depois">
+                <p>Estrutura de site com Flexbox e Templete Grid, que simula o site da Starbucks, feito apenas para treino</p>
+                <ul class="portfolio-tecnologia">
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Html</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">CSS</a></li>
+                    <li><a href="https://github.com/LiszUehara/Starbucks" target="_blank">Github</a></li>
+                    <li><a href="https://deft-tiramisu-5085bb.netlify.app/" type="button" target="_blank">Visualizar</a></li>
+                </ul>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-banner-imagem">
+        <div class="portfolio-imagem portfolio-card1">
+            <div class="portfolio-antes">
+                <h1 class="portfolio-nome">Pizzaria</h1>
+                <img src="./assets/img/pizzaria.jpg" alt="pizzaria">
+            </div>
+        </div>
+        <div class="portfolio-imagem portfolio-card2">
+            <div class="portfolio-depois">
+                
+                <p>Site feito para simular um site de delivery de pizza, no qual tem a opção de menu, comprar e o menu de carrinho implementada</p>
+                <ul class="portfolio-tecnologia">
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Html</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
+                    <li><a href="https://github.com/LiszUehara/Pizzaria" target="_blank">Github</a></li>
+                    <li><a href="https://vermillion-wisp-0412ff.netlify.app/" type="button" target="_blank">Visualizar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
      </section>
 
      <section class="contato" id="contato" aria-label="contato">
