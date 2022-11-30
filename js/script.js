@@ -1,16 +1,3 @@
-function mostrarAtivo(local){
-    let li = document.getElementById('header-menu');
-    let a = li.getElementsByTagName('a');
-    for (i=0; i<a.length; i++ ){
-       a[i].style.color = "";
-    }
-       local.style.color = "#d7d7d7";
-    }
-
-
-//função de destaque do menu
-
-
 const section = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav .container ul li');
 
@@ -20,7 +7,7 @@ window.addEventListener('scroll', ()=>{
    section.forEach( section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-      if(pageYoffset >= (sectionTop - sectionHeight /3)){
+      if(pageYOffset >= (sectionTop - sectionHeight /3)){
          current = section.getAttribute('id');
          
       }
@@ -29,10 +16,11 @@ window.addEventListener('scroll', ()=>{
    navLi.forEach( (li) => {
 
       li.classList.remove('active');
-      if(li.classList.contains(current)){
+      if(li.classList.contains(current+'-header')){
          li.classList.add('active');
       }
    })
 })
+
 
 
