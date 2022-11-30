@@ -12,6 +12,24 @@
 
 }
 
+nav .container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+nav .container ul li.active{
+    background-color: red;
+    transition:  0.3 ease background-color;
+}
+
+nav .container ul li.active a{
+    color: white;
+}
+
+
 .header-menu{
     display: flex;
     gap: 20px;
@@ -43,6 +61,12 @@ li:active{
 .header li a:hover{
     border: solid 0.2rem #d7d7d7;
     padding: 2px;
+}
+
+
+nav .header-menu li a .active{
+    background: red;
+
 }
 
 @media(max-width:600px){

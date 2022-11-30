@@ -2,6 +2,13 @@
     width: 100%;
 
 }
+
+.formacao .subtitulo{
+    max-width: 5ch;
+    font-size: 7rem;
+}
+
+
 .formacao-container{
     padding: 120px 20px;
     margin: 0 auto;

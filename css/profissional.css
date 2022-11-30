@@ -1,5 +1,10 @@
+.profissional{
+    background: #000000;
+}
+
 .profissional .subtitulo{
     text-align: center;
+    padding-top: 80px;
 }
 
 .profissional-container{
