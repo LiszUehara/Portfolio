@@ -12,7 +12,7 @@
 .formacao-container{
     padding: 120px 20px;
     margin: 0 auto;
-    gap: 100px;
+    gap: 40px;
     justify-content: center;
     align-items: center;
     display: grid;
@@ -92,7 +92,7 @@
     .container {
         grid-template-columns: 1fr 1fr;
         padding: 20px 20px;
-        gap: 4pxpx;
+        gap: 4px;
     }
 
     .curso-lista{
@@ -105,14 +105,11 @@
         font-size: 1.25rem;
     }
 
-    .container .subtitulo{
-        font-size: 3.2rem;
-        max-width: 9ch;
-    }
-
-    .container .subtitulo{
-        font-size: 40px;
+    
+    .formacao-container .subtitulo{
+        font-size: 5rem;
         padding: 15px;
+        max-width: 5ch;
         padding-bottom: 20px;
         margin-bottom: 5px;
     }
