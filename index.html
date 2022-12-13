@@ -14,6 +14,7 @@
     
 </head>
 <body>
+    <div>
      <header class="header">
         
         <h1><a href="#home">PortfoLisz</a></h1>
@@ -309,7 +310,9 @@
                 
             
             <button class="botao">Enviar</button>
+            
         </form>
+            <button class="botao abrir" data-modal="abrir" id="abrir">Visualizar</button>
      </div>
 
 
@@ -347,7 +350,15 @@
             <a href="https://www.linkedin.com/in/lisandrauehara/" target="_blank"><img src="./assets/img/contato/linkedin.png" alt="linkedin"></a>
         </div>
      </footer>
+    </div>
 
+     <section class="modal-container" data-modal="container">
+        <div class="modal">
+            <button data-modal="fechar" class="fechar">X</button>
+            <ul class="lista" id="lista"></ul>
+        </div> 
+
+     </section>
      <script src="./js/script.js"></script>
 
      </body>
