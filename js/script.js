@@ -57,7 +57,7 @@ const lista = document.getElementById("lista");
 const itens = JSON.parse(localStorage.getItem("itens")) || [];
 
 itens.forEach((elemento) =>{
-   criaElemento(elemento)
+   criaElemento(elemento);
 })
 
 
@@ -68,7 +68,7 @@ form.addEventListener("submit", (evento) =>{
     const email = evento.target.elements['email'];
     const mensagem = evento.target.elements['mensagem'];
 
-    const existe = itens.find(elemento => elemento.nome == nome.value);
+    const existe = itens.find(elemento => elemento.nome === nome.value);
 
     const itemAtual = {
       "nome": nome.value,
@@ -80,6 +80,8 @@ form.addEventListener("submit", (evento) =>{
       itemAtual.id = existe.id;
 
       atualizaElemento(itemAtual);
+
+      itens[existe.id] = itemAtual;
 
     } else {
       itemAtual.id = itens.length;
@@ -104,11 +106,16 @@ function criaElemento(item){
    
 
    const nomeItem = document.createElement('stronger');
+   const emailItem = document.createElement('stronger');
+   const mensagemItem = document.createElement('stronger');
    nomeItem.innerHTML = item.nome;
+   emailItem.innerHTML = item.email;
+   mensagemItem.innerHTML = item.mensagem;
    nomeItem.dataset.id = item.id;
    novoItem.appendChild(nomeItem);
-   nomeItem.innerHTML += item.email += item.mensagem;
-   
+   novoItem.appendChild(emailItem);
+   novoItem.appendChild(mensagemItem);
+
     
 
     lista.appendChild(novoItem);
@@ -117,7 +124,10 @@ function criaElemento(item){
 
 function atualizaElemento(item){
    
-      document.querySelector("[data-id'"+item.id+"']").innerHTML = item.email;
-
+   document.querySelector("[data-id='"+item.id+"']").innerHTML = item.email;
+   document.querySelector("[data-id='"+item.id+"']").innerHTML = item.mensagem;
    }
 
+function botaoDeleta(){
+   const elementoBota = document.createElement() 
+}
