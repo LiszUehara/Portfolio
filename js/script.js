@@ -53,28 +53,71 @@ if(botaoAbrir && botaoFechar && containerModal){
 //local storage
 
 const form = document.getElementById("novoItem");
+const lista = document.getElementById("lista");
+const itens = JSON.parse(localStorage.getItem("itens")) || [];
+
+itens.forEach((elemento) =>{
+   criaElemento(elemento)
+})
 
 
 form.addEventListener("submit", (evento) =>{
     evento.preventDefault();
 
-    criaElemento(evento.target.elements['nome'].value, evento.target.elements['email'].value, evento.target.elements['mensagem'].value )
-    evento.target.elements['nome'].value = "";
-    evento.target.elements['email'].value = "";
+    const nome = evento.target.elements['nome'];
+    const email = evento.target.elements['email'];
+    const mensagem = evento.target.elements['mensagem'];
+
+    const existe = itens.find(elemento => elemento.nome == nome.value);
+
+    const itemAtual = {
+      "nome": nome.value,
+      "email": email.value,
+      "mensagem": mensagem.value
+    }
+
+    if(existe){
+      itemAtual.id = existe.id;
+
+      atualizaElemento(itemAtual);
+
+    } else {
+      itemAtual.id = itens.length;
+
+      criaElemento(itemAtual);
+      itens.push(itemAtual);
+
+
+    }
+
+    
+    localStorage.setItem("itens", JSON.stringify(itens));
+    
+
+    nome.value = "";
+    email.value = "";
 })
 
-function criaElemento(nome, email, mensagem){
+function criaElemento(item){
    const novoItem = document.createElement('li');
    novoItem.classList.add("item");
+   
 
    const nomeItem = document.createElement('stronger');
-   nomeItem.innerHTML = nome;
-
+   nomeItem.innerHTML = item.nome;
+   nomeItem.dataset.id = item.id;
    novoItem.appendChild(nomeItem);
-   nomeItem.innerHTML += email += mensagem;
+   nomeItem.innerHTML += item.email += item.mensagem;
    
-    const lista = document.getElementById("lista");
+    
 
     lista.appendChild(novoItem);
+    
 }
+
+function atualizaElemento(item){
+   
+      document.querySelector("[data-id'"+item.id+"']").innerHTML = item.email;
+
+   }
 
