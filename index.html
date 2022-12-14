@@ -289,30 +289,30 @@
         
      <div class="contato-formulario">
     
-        <form method="POST" action="./index.html">
+        <form method="POST"  id="novoItem">
 
             <div>
                 <label for="name">Nome</label>
-                <input type="text" id="nome"  name="name" placeholder="Seu nome" required>
+                <input type="text" id="nome"  name="name" placeholder="Seu nome"  value="teste" required>
             </div>
 
 
             <div>
                 <label for="email">Email</label>
-                <input type="email" id="email"  name="email" placeholder="seunome@email.com" required pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}">
+                <input type="email" id="email"  name="email" placeholder="seunome@email.com" value="teste@teste.com" >
             </div>
 
 
             <div>
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" value="teste"></textarea>
             </div>
                 
             
-            <button class="botao">Enviar</button>
+            <button class="botao"  type="submit">Enviar</button>
             
         </form>
-            <button class="botao abrir" data-modal="abrir" id="abrir">Visualizar</button>
+            <button class="botao abrir" data-modal="abrir" id="abrir" >Abrir</button>
      </div>
 
 

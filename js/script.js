@@ -27,14 +27,12 @@ const botaoFechar = document.querySelector('[data-modal="fechar"]');
 const containerModal = document.querySelector('[data-modal="container"]');
 
 
-if(botaoAbrir && botarFechar && containerModal){
+if(botaoAbrir && botaoFechar && containerModal){
    function abrirModal(event){
-      event.preventDefault();
       containerModal.classList.add('ativo');
    }
    
    function fecharModal(event){
-      event.preventDefault();
       containerModal.classList.remove('ativo');
    }
    
@@ -45,7 +43,38 @@ if(botaoAbrir && botarFechar && containerModal){
    }
    
    
+   
+   
    botaoAbrir.addEventListener('click', abrirModal);
    botaoFechar.addEventListener('click', fecharModal);
    containerModal.addEventListener('click', cliqueForaModal);
 }
+
+//local storage
+
+const form = document.getElementById("novoItem");
+
+
+form.addEventListener("submit", (evento) =>{
+    evento.preventDefault();
+
+    criaElemento(evento.target.elements['nome'].value, evento.target.elements['email'].value, evento.target.elements['mensagem'].value )
+    evento.target.elements['nome'].value = "";
+    evento.target.elements['email'].value = "";
+})
+
+function criaElemento(nome, email, mensagem){
+   const novoItem = document.createElement('li');
+   novoItem.classList.add("item");
+
+   const nomeItem = document.createElement('stronger');
+   nomeItem.innerHTML = nome;
+
+   novoItem.appendChild(nomeItem);
+   nomeItem.innerHTML += email += mensagem;
+   
+    const lista = document.getElementById("lista");
+
+    lista.appendChild(novoItem);
+}
+
