@@ -117,7 +117,7 @@ function criaElemento(item){
    novoItem.appendChild(mensagemItem);
 
     
-
+   novoItem.appendChild(botaoDeleta(item.id));
     lista.appendChild(novoItem);
     
 }
@@ -128,6 +128,22 @@ function atualizaElemento(item){
    document.querySelector("[data-id='"+item.id+"']").innerHTML = item.mensagem;
    }
 
-function botaoDeleta(){
-   const elementoBota = document.createElement() 
+function botaoDeleta(id){
+   const elementoBotao = document.createElement("button");
+   elementoBotao.innerText = "X";
+
+   elementoBotao.addEventListener("click", function(){
+      deletaElemento(this.parentNode, id);
+   })
+
+   return elementoBotao;
 }
+
+
+function deletaElemento(tag, id){
+   tag.remove();
+   itens.splice(itens.findIndex(elemento => elemento.id === id), 1);
+
+   localStorage.setItem("itens", JSON.stringify(itens));
+}
+
