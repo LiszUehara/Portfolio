@@ -1,9 +1,8 @@
-const section = document.querySelectorAll('section');
+const section = document.querySelectorAll('div section');
 const navLi = document.querySelectorAll('nav .container ul li');
 
 window.addEventListener('scroll', ()=>{
    let current = '';
-
    section.forEach( section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
