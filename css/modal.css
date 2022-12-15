@@ -9,6 +9,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
 }
 
 .ativo{
@@ -22,6 +23,30 @@
     border:  10px solid #E8175D;
     box-shadow: 0 0 0 10px #d7d7d7;
     position: relative;
+    max-width: 60%;
+    max-height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: break-word;
+}
+
+.semMensagens{
+    display: none;
+}
+
+.botaoModal{
+    padding: 15px 15px;
+    background-color: red;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 15px;
+    max-width: max-content;
+    border: none;
+    cursor: pointer;
+    color: #e7e0dc;
+    font-weight: 200;
+    margin: 0 auto;
+    display: block;
 }
 
 @keyframes modal{
@@ -40,13 +65,13 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    top: -30px;
-    right: -30px;
-    position: absolute;
-    background: #E8175D;
+    right: 25px;
+    position: relative;
+    background: red;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
     font-size: 1.2rem;
     font-family: #d7d7d7;
+    z-index: 999;
     cursor: pointer;
 }
 
@@ -83,6 +108,7 @@
     align-items: center;
     gap: 1em;
     font-size: 20px;
+    display: grid;
 }
 
 .item strong {

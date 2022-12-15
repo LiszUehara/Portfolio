@@ -114,8 +114,13 @@
     color: #E8175D;
     font-weight: 200;
     margin-bottom: 10px;
+    align-items: center;
 }
 
+.divBotoes{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 @media (max-width: 800px){
     .contato-container{
@@ -136,6 +141,7 @@
     .botao{
         padding: 9px 9px;
         font-size: 15px;
+        width: 100%;
 
     }
 

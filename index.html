@@ -308,11 +308,11 @@
                 <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" value="teste"></textarea>
             </div>
                 
-            
             <button class="botao"  type="submit">Enviar</button>
             
         </form>
-            <button class="botao abrir" data-modal="abrir" id="abrir" >Abrir</button>
+        <button class="botao abrir" data-modal="abrir" id="abrir" >Abrir</button>
+        
      </div>
 
 
@@ -353,14 +353,15 @@
     </div>
 
      <section class="modal-container" data-modal="container">
+        
         <div class="modal">
-            <button data-modal="fechar" class="fechar">X</button>
+            <h1 class="semMensagens">Nenhuma Mensagem Encontrada</h1>
             <ul class="lista" id="lista">
                 
             </ul>
-            <button id="deleteTudo">Delete</button>
+            <button class="botaoModal" id="deleteTudo">Remover Todos</button>
         </div> 
-
+        <button data-modal="fechar" class="fechar">X</button>
      </section>
      <script src="./js/script.js"></script>
 

@@ -24,10 +24,14 @@ window.addEventListener('scroll', ()=>{
 const botaoAbrir = document.querySelector('[data-modal="abrir"]');
 const botaoFechar = document.querySelector('[data-modal="fechar"]');
 const containerModal = document.querySelector('[data-modal="container"]');
+const divModal = document.querySelector('.modal');
+const semMensagensModal = document.querySelector('.semMensagens');
+const limpar = document.getElementById("deleteTudo");
 
-
+console.log(botaoAbrir);
 if(botaoAbrir && botaoFechar && containerModal){
    function abrirModal(event){
+      verificarSemMensagens();      
       containerModal.classList.add('ativo');
    }
    
@@ -54,7 +58,7 @@ if(botaoAbrir && botaoFechar && containerModal){
 const form = document.getElementById("novoItem");
 const lista = document.getElementById("lista");
 const itens = JSON.parse(localStorage.getItem("itens")) || [];
-
+console.log(itens);
 itens.forEach((elemento) =>{
    criaElemento(elemento);
 })
@@ -116,15 +120,27 @@ function criaElemento(item){
    novoItem.appendChild(mensagemItem);
 
     
-   novoItem.appendChild(botaoDeleta(item.id));
+    novoItem.appendChild(botaoDeleta(item.id));
     lista.appendChild(novoItem);
     
 }
 
+function verificarSemMensagens() {
+   const itensLength = JSON.parse(localStorage.getItem("itens")).length || 0;
+   if (itensLength > 0) {
+      limpar.style.display = "block";
+      semMensagensModal.style.display = "none";
+   } else {
+      limpar.style.display = "none";
+      semMensagensModal.style.display = "block";
+   }
+}
 
 function botaoDeleta(id){
    const elementoBotao = document.createElement("button");
-   elementoBotao.innerText = "X";
+   elementoBotao.classList.add('botaoModal');
+
+   elementoBotao.innerText = "Remover";
 
    elementoBotao.addEventListener("click", function(){
       deletaElemento(this.parentNode, id);
@@ -143,10 +159,11 @@ function deletaElemento(tag, id){
 
 
 
-   function deletaTudo(itens){ 
-      const limpar = document.getElementById("deleteTudo");
-      limpar.addEventListener("click", function(){
-         localStorage.clear("itens", JSON.stringify(itens));
-      })
-
+limpar.addEventListener("click", function(){
+   const tags = document.querySelectorAll('li.item');
+   for (let i = 0; i < tags.length; i++) {
+      console.log("Deletando :)")
+      deletaElemento(tags[i],i)
    }
+   verificarSemMensagens()
+})
